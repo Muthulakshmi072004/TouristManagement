@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Places</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+
+        }
+         .div {
+          display: block;
+          unicode-bidi: isolate;
+       }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .gallery-item {
+            width: 300px;
+            text-align: center;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .gallery-item h3 {
+            margin: 10px 0;
+            font-size: 20px;
+            color: #333;
+        }
+        .gallery-item a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+        }
+        .gallery-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Explore Beautiful Tourist Places</h1>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/300x200.png?text=Paris" alt="Paris">
+            <h3>Paris, France</h3>
+            <a href="https://en.wikipedia.org/wiki/Paris" target="_blank">Learn More</a>
+        </div>
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/300x200.png?text=Great+Wall+of+China" alt="Great Wall of China">
+            <h3>Great Wall of China, China</h3>
+            <a href="https://en.wikipedia.org/wiki/Great_Wall_of_China" target="_blank">Learn More</a>
+        </div>
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/300x200.png?text=Machu+Picchu" alt="Machu Picchu">
+            <h3>Machu Picchu, Peru</h3>
+            <a href="https://en.wikipedia.org/wiki/Machu_Picchu" target="_blank">Learn More</a>
+        </div>
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/300x200.png?text=Santorini" alt="Santorini">
+            <h3>Santorini, Greece</h3>
+            <a href="https://en.wikipedia.org/wiki/Santorini" target="_blank">Learn More</a>
+        </div>
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/300x200.png?text=Grand+Canyon" alt="Grand Canyon">
+            <h3>Grand Canyon, USA</h3>
+            <a href="https://en.wikipedia.org/wiki/Grand_Canyon" target="_blank">Learn More</a>
+        </div>
+    </div>
+</body>
+</html>
