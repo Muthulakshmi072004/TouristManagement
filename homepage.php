@@ -10,7 +10,7 @@
             padding: 0;
             font-family: Arial, sans-serif;
             color: #fff;
-            background-image: url("image/homess.jpeg");
+            background-image: url("image\\Nature.jpeg");
             background-size: cover;
             background-position: center;
         }

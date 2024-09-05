@@ -32,6 +32,10 @@ header h1 {
     margin: 0;
     text-align: center;
 }
+header img {
+    height: 10px;
+}
+
 
 nav {
     text-align: center;
@@ -187,8 +191,9 @@ footer p {
 </head>
 <body>
     <header>
+        <img src="image\Cablogo.png" alt="cab Logo">
         <div class="container">
-            <h1>Welcome to Cab Service</h1>
+            <h1>Welcome to  Familiar Cab Service</h1>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -213,16 +218,8 @@ footer p {
             <h2>Our Services</h2>
             <div class="service-cards">
                 <div class="card">
-                    <h3>City Rides</h3>
-                    <p>Quick and affordable rides within the city.</p>
-                </div>
-                <div class="card">
-                    <h3>Airport Transfers</h3>
-                    <p>Hassle-free transfers to and from the airport.</p>
-                </div>
-                <div class="card">
-                    <h3>Outstation Trips</h3>
-                    <p>Comfortable rides for outstation trips.</p>
+                    <h3>Bus</h3>
+                    <p>Quick and affordable rides within the Jungle.</p>
                 </div>
             </div>
         </div>

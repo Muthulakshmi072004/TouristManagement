@@ -15,7 +15,7 @@
             margin: 0;
         }
         .login-container {
-            background-color: #444;
+            background-color: #777;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
