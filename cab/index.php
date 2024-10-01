@@ -3,247 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cab Service</title>
+    <title>Cab Booking Dashboard - Tourist Management</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- External CSS for styling -->
     <style>
-        /* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Header */
-header {
-    background-color: #444;
-    padding: 20px 0;
-    color: white;
-}
-
-header h1 {
-    margin: 0;
-    text-align: center;
-}
-header img {
-    height: 10px;
-}
-
-
-nav {
-    text-align: center;
-    margin-top: 10px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Hero Section */
-.hero {
-    background-color: #226;
-    color: white;
-    padding: 60px 0;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.hero .btn {
-    background-color: #5cb85c;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-}
-
-.hero .btn:hover {
-    background-color: #4cae4c;
-}
-
-/* Services Section */
-.services {
-    padding: 60px 0;
-    background-color: #fff;
-}
-
-.services h2 {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.service-cards {
-    display: flex;
-    justify-content: space-around;
-}
-
-.service-cards .card {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 30%;
-}
-
-.service-cards .card h3 {
-    margin-bottom: 15px;
-    font-size: 22px;
-}
-
-.service-cards .card p {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-/* About Section */
-.about {
-    padding: 60px 0;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-.about h2 {
-    margin-bottom: 20px;
-}
-
-.about p {
-    font-size: 18px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Contact Section */
-.contact {
-    padding: 60px 0;
-    background-color: #444;
-    color: white;
-    text-align: center;
-}
-
-.contact h2 {
-    margin-bottom: 20px;
-}
-
-.contact p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.contact .btn {
-    background-color: #5cb85c;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-}
-
-.contact .btn:hover {
-    background-color: #4cae4c;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer p {
-    margin: 0;
-}
-
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .dashboard {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .card {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .card-item {
+            background: white;
+            width: 30%;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .card-item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card-item i {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #007BFF;
+        }
+        .card-item h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+        .services-section, .faq-section, .testimonial-section, .contact-section {
+            background-color: #fff;
+            padding: 40px 20px;
+            margin-top: 20px;
+        }
+        .faq-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .faq-section li {
+            margin-bottom: 10px;
+        }
+        .contact-section form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-section input, .contact-section textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .contact-section button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-section button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <img src="image\Cablogo.png" alt="cab Logo">
-        <div class="container">
-            <h1>Welcome to  Familiar Cab Service</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <section class="hero" id="home">
-        <div class="container">
-            <h2>Your Ride, Your Way</h2>
-            <p>Reliable cab services at your fingertips.</p>
-            <a href="#services" class="btn">Book a Ride</a>
-        </div>
-    </section>
+    <div class="dashboard">
+        <h1>Cab Booking Dashboard</h1>
 
-    <section class="services" id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-cards">
-                <div class="card">
-                    <h3>Bus</h3>
-                    <p>Quick and affordable rides within the Jungle.</p>
-                </div>
+        <div class="card">
+            <!-- Cab Booking Option 1 -->
+            <div class="card-item">
+                <i class="fas fa-taxi"></i>
+                <h3>Book a City Tour</h3>
+                <p>Explore the city with our comfortable cabs.</p>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+
+            <!-- Cab Booking Option 2 -->
+            <div class="card-item">
+                <i class="fas fa-road"></i>
+                <h3>Airport Pickup</h3>
+                <p>We provide reliable airport pickup services.</p>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+
+            <!-- Cab Booking Option 3 -->
+            <div class="card-item">
+                <i class="fas fa-map-marked-alt"></i>
+                <h3>Outstation Trip</h3>
+                <p>Plan your outstation trip with our safe cabs.</p>
+                <a href="#" class="btn">Book Now</a>
             </div>
         </div>
-    </section>
 
-    <section class="about" id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>We are committed to providing the best cab services with a focus on safety, comfort, and customer satisfaction.</p>
-        </div>
-    </section>
+        <div class="card">
+            <!-- Cab Availability -->
+            <div class="card-item">
+                <i class="fas fa-car"></i>
+                <h3>Available Cabs</h3>
+                <p>Check cab availability in your location.</p>
+                <a href="#" class="btn">Check Availability</a>
+            </div>
 
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Get in touch with us for any queries or support.</p>
-            <a href="contact.php" class="btn">Contact Now</a>
+            <!-- Jeep Booking Option -->
+            <div class="card-item">
+                <i class="fas fa-car-side"></i>
+                <h3>Book a Jeep</h3>
+                <p>Explore off-road destinations with our jeep service.</p>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+
+            <!-- Bus Booking Option -->
+            <div class="card-item">
+                <i class="fas fa-bus"></i>
+                <h3>Book a Bus</h3>
+                <p>Travel in groups with our comfortable buses.</p>
+                <a href="#" class="btn">Book Now</a>
+            </div>
         </div>
-    </section>
+    </div>
+
+    <!-- Services Section -->
+    <div class="services-section">
+        <h2>Our Services</h2>
+        <p>We offer a range of vehicle services to meet all your travel needs, whether you're exploring the city, heading to the airport, or planning an outstation trip.</p>
+        <ul>
+            <li>Comfortable city tours with cabs</li>
+            <li>Jeep for off-road trips</li>
+            <li>Bus for group travel</li>
+            <li>Reliable airport pickups and drop-offs</li>
+            <li>Long-distance outstation trips</li>
+            <li>24/7 customer support and driver assistance</li>
+        </ul>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <ul>
+            <li><strong>Q: Can I book a cab for multiple destinations?</strong><br>A: Yes, you can customize your trip and add multiple stops to your booking.</li>
+            <li><strong>Q: Are your drivers experienced?</strong><br>A: All of our drivers are well-trained, experienced, and have been thoroughly vetted for safety.</li>
+            <li><strong>Q: How can I modify or cancel my booking?</strong><br>A: You can modify or cancel your booking through your profile or by contacting our support team.</li>
+        </ul>
+    </div>
+
+    <!-- Testimonial Section -->
+    <div class="testimonial-section">
+        <h2>What Our Customers Say</h2>
+        <p><i class="fas fa-quote-left"></i> Excellent service! The cab was clean, the driver was courteous, and the booking process was very simple. Highly recommend this service! <i class="fas fa-quote-right"></i></p>
+        <p>- Sarah M., Customer</p>
+
+        <p><i class="fas fa-quote-left"></i> Reliable and on time. I always use their service for airport pickups and have never been disappointed. <i class="fas fa-quote-right"></i></p>
+        <p>- John D., Customer</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-section">
+        <h2>Contact Us</h2>
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Cab Service. All rights reserved.</p>
-        </div>
+        &copy; 2024 Tourist Management. All rights reserved.
     </footer>
+
 </body>
 </html>
